@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="{% static '/scss/sb-admin-2.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
+    <title>Smart Download {% block title %} {%endblock title%} </title>
+</head>
+<body>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                
+                    </nav>
+                  </header>           
+                    <div class="container-fluid bg-primary">
+                        <div class="d-block text-center">
+                            <h2 class="text-white font-weight-bold pt-4">Download Instagram video and Photos</h2>
+                            <form action="" class="" method="post">
+                                {% csrf_token %}
+                                <p class="p-4">
+                                    <label for="url" class="text-white">Enter Instagram url</label> <br>
+                                    <input type="url" name="url" id="url" class="form form-control" required placeholder="Enter the url">
+                                    <button class="btn m-2 btn-light">Check if URL has Images or Videos</button>
+                                </p>
+                            </form>
+                          
+                        </div>
+                    </div>
+               
+
+            </div>
+            <!-- End of Main content -->
+        </div>
+        <!-- End of Content wrapper -->
+    </div>
+    <!-- End of Page wrapper -->
+    
+</body>
+    <script src="{% static '/bootstra.js' %}"></script>
+</html>
